@@ -61,7 +61,8 @@
 %     1. Fix the ``underfull hbox'' error when using 2 backslashes for new (empty) lines
 %		  2. Add hanging indent in abstract pages (en/el) for the Keywords
 %     3. Define switch to print english version pages first (class option ``enfirst'')
-%     4. Add support for PhD (default), BSc/MSc versions (class options ``bsc'' or ``msc'')
+%     4. Add support for BSc/MSc versions (class options ``bsc'' or ``msc''), 
+%        except the default PhD version
 %
 % Version 1.1, 2015/11/06
 %		Updated document class so as to be compatible with the template file 

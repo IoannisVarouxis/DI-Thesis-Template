@@ -1,0 +1,200 @@
+% thesis-bsc.tex
+%
+% Enjoy, evolve, and share!
+%
+% Compile it as follows:
+%	xelatex thesis2.tex
+%   bibtex demo.aux
+%   bibtex lop.aux (run this, only if you pass option 'lop' below)
+%   xelatex thesis2.tex && xelatex thesis2.tex
+%
+% Alternatively, compile it using `make -i' (see the provided Makefile).
+%
+% Check file `diphdthesis.cls' for other configuration options.
+%
+\documentclass[inscr,ack,preface,enfirst,bsc]{diphdthesis}
+
+%\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% User-specific package inclusions %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\hypersetup{
+    unicode=true,                     % non-Latin characters in bookmarks
+    %pdffitwindow=true,                % page fit to window when opened
+    pdfnewwindow=true,                % links in new window
+    pdfkeywords={},                   % list of keywords
+    colorlinks=true,                  % false: boxed links; true: colored links
+    linkcolor=black,                  % color of internal links
+    citecolor=black,                  % color of links to bibliography
+    filecolor=black,                  % color of file links
+    urlcolor=black,                   % color of external links
+    pdftitle={},                      % title
+    pdfauthor={},                     % author
+    pdfsubject={}                     % subject of the document
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% User-specific package inclusions %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% User-specific configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% User-specific configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Required Metadata %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First name, last name
+%
+\authorFirstGr{Όνομα}
+\authorFirstAbrGr{Ο.} % abbreviation of first name
+\authorMiddleGr{Σ.}   % abbreviation of father's first name
+\authorLastGr{Επίθετο}
+\authorFirstEn{Onoma}
+\authorFirstAbrEn{O.}
+\authorMiddleEn{S.}
+\authorLastEn{Epitheto}
+\authorSN{000000}
+
+%
+% The post-graduate program title (in case of PhD and MSc)
+% Default values are defined in class, use below variables when required
+%
+% PhD / MSc
+%\psProgramGr{ΠΡΟΓΡΑΜΜΑ ΜΕΤΑΠΤΥΧΙΑΚΩΝ ΣΠΟΥΔΩΝ}
+%\psProgramEn{PROGRAM OF POSTGRADUATE STUDIES}
+%\psProgramEmptyLines{\linebreak\linebreak\linebreak\linebreak\linebreak\linebreak}
+% Long MSc program title
+\psProgramGr{ΔΙΑΤΜΗΜΑΤΙΚΟ ΠΡΟΓΡΑΜΜΑ ΜΕΤΑΠΤΥΧΙΑΚΩΝ ΣΠΟΥΔΩΝ ΣΤΗ ΔΙΟΙΚΗΣΗ ΚΑΙ ΟΙΚΟΝΟΜΙΚΗ ΤΩΝ ΤΗΛΕΠΙΚΟΙΝΩΝΙΑΚΩΝ ΔΙΚΤΥΩΝ ΚΑΙ ΠΛΗΡΟΦΟΡΙΑΚΩΝ ΣΥΣΤΗΜΑΤΩΝ}
+\psProgramEn{INTERDEPARTMENTAL POST-GRADUATE PROGRAM IN MANAGEMENT AND ECONOMICS OF TELECOMMUNICATION NETWORKS AND INFORMATION SYSTEMS}
+\psProgramEmptyLines{\linebreak\linebreak\linebreak}
+
+%
+% The type of the thesis
+% Default values are defined in class, use below variables when required
+%
+%\thesisTypeGr{ΔΙΔΑΚΤΟΡΙΚΗ ΔΙΑΤΡΙΒΗ}
+%\thesisTypeEn{PhD THESIS}
+%\thesisTypeGr{ΔΙΠΛΩΜΑΤΙΚΗ ΕΡΓΑΣΙΑ}
+%\thesisTypeEn{MSc THESIS}
+%\thesisTypeGr{ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ}
+%\thesisTypeEn{BSc THESIS}
+
+%
+% The title of the thesis
+%
+\titleGr{Τίτλος πτυχιακής/διπλωματικής εργασίας / διδακτορικής διατριβής στα Ελληνικά}
+\titleEn{BSc / MSc / PhD thesis title in English}
+
+%
+% Month followed by Year
+%
+\dateGr{ΜΑΪΟΣ 2010}
+\dateEn{MAY 2010}
+
+\input{chapters/0_board_members.tex}
+
+%
+% Abstract, synopsis, inscription, ack, and preface pages.
+%
+% \abstractEn{Abstract in English here.}
+% \abstractGr{Η περίληψη στα Ελληνικά.}
+% \synopsisGr{Συνοπτική περιγραφή του διδακτορικού (5--8 σελίδες).}
+% \acksEn{}
+% \prefaceEn{}
+\input{chapters/0_abstract_eng.tex}
+\input{chapters/0_abstract_gr.tex}
+%\input{chapters/0_synopsis_gr.tex}
+\input{chapters/0_acks.tex}
+\input{chapters/0_preface.tex}
+
+\inscriptionEn{\emph{To my dear person.}}
+
+%
+% Subject area and keywords
+%
+\input{chapters/0_keywords.tex}
+\input{chapters/0_subject_area.tex}
+% \subjectAreaGr{θεματική περιοχή}
+% \subjectAreaEn{subject area}
+% \keywordsGr{Λέξη κλειδί1, λέξη κλειδί2, λέξη κλειδί3}
+% \keywordsEn{Keyword1, keyword2, keyword3}
+
+%
+% Set the .bib file containing your paper publications (leave the extension out)
+%
+% This is optional, but it should be specified when option 'lop' is passed to
+% the document class.
+%
+% Then, inside the document environment, you may use the command '\nocitelop' to
+% site your papers, as you would traditionally do with the commands '\cite' or
+% '\nocite'.
+%
+% The papers are printed in reverse chronological order.
+%
+%\lopfile{mypapers/pubs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Required Metadata %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+
+% site my papers
+%\nocitelop{}
+
+\mainmatter
+
+% add main chapters (should be given in capital letters)
+% \chapter{INTRODUCTION}
+% \chapter{BACKGROUND AND RELATED WORK}
+% \chapter{ANOTHER CHAPTER}
+% \chapter{CONCLUSIONS AND FUTURE WORK}
+\input{chapters/1_intro.tex}
+\input{chapters/2.tex}
+\input{chapters/3.tex}
+\input{chapters/4.tex}
+
+\backmatter
+
+% abbreviations table
+\abbreviations
+\input{chapters/abbreviations.tex}
+
+% appendix
+\begin{appendix}
+% mark the beginning of the appendix
+\appendixstartedtrue
+
+% add appendix line to ToC
+\phantomsection
+\addcontentsline{toc}{chapter}{APPENDICES}
+
+\chapter{FIRST APPENDIX}
+\chapter{SECOND APPENDIX}
+\chapter{THIRD APPENDIX}
+\end{appendix}
+
+% manually include the bibliography
+\bibliographystyle{ieeetr}
+% \bibliography{references}
+% set font size (10pt) for bib entries
+{\fontsize{10pt}{1}\selectfont
+\bibliography{references}}
+
+% include it also in ToC (do sth on your own)
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+\end{document}

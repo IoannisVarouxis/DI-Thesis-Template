@@ -902,7 +902,9 @@ publications}\gdef\@lopfileinternal{#1}}
     \fi
 
     % thesis synopsis (greek version only, OPTIONAL)
-    \@synopsis
+    \ifphd
+      \@synopsis
+    \fi
     \ifinscriptionpage
        	\@inscr
     \fi

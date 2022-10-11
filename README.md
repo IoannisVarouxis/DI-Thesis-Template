@@ -16,6 +16,11 @@ Updated document class with the following fixes:
 1. Fix the "underfull hbox" error when using 2 backslashes for new (empty) lines
 2. Add hanging indent in abstract pages (en/el) for the Keywords
 
+## Build
+### VS Code
+Use the LaTeX Workshop extension. In extension settings, change the build recipe (Latex-workshop \ Latex \ Recipe) and type:
+  latexmk (xelatex)
+
 ## License
 
 LPPL License as described in LICENSE file
